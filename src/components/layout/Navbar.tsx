@@ -15,15 +15,15 @@ export const Navbar = () => {
   const activeSection = useScrollSection();
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed z-50 w-full bg-white shadow-lg">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Laptop className="h-8 w-8 text-blue-600" />
-            <span className="ml-2 text-xl font-bold text-gray-800">ByteBruders</span>
+            <Laptop className="w-8 h-8 text-blue-600" />
+            <span className="ml-2 text-xl font-bold text-gray-800">BYTEBRUDER</span>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="items-center hidden space-x-8 md:flex">
             {navLinks.map(({ href, label }) => (
               <a
                 key={href}
@@ -38,9 +38,9 @@ export const Navbar = () => {
             <Button variant="primary">Contact Us</Button>
           </div>
 
-          <div className="md:hidden flex items-center">
+          <div className="flex items-center md:hidden">
             <button onClick={() => setIsOpen(!isOpen)}>
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
